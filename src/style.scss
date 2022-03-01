@@ -1,0 +1,92 @@
+@import "colors";
+.hfh-page-grid {
+    margin-bottom: 2rem;
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(min(100%, 360px), 1fr));
+    column-gap: 8px;
+    row-gap: 16px;
+    .hfh-page-grid__column {
+        width: 100%;
+        .hfh-page-grid__teaser {
+            height: 100%;
+        }
+    }
+}
+
+.hfh-page-grid__teaser {
+    height: 100%;
+    border: 2px solid $fantasy-plain;
+    article {
+        height: 100%;
+    }
+    .hfh-page-grid__link {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        &:hover,
+        &:focus {
+            .hfh-page-grid__text {
+                background-color: $thunderbird-red;
+                color: $white;
+            }
+            .hfh-page-grid__arrow {
+                color: $white;
+            }
+        }
+    }
+    .hfh-page-grid__image {
+        position: relative;
+        padding-bottom: 50%;
+        overflow: hidden;
+        background-color: $fantasy-light;
+        img {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: 0 auto;
+        }
+    }
+    .hfh-page-grid__text {
+        flex: 1 0;
+        display: flex;
+        flex-direction: column;
+        padding: 20px 22px 32px 22px;
+        color: $black;
+        background-color: $white;
+        .hfh-page-grid__title {
+            font-size: 32px;
+            line-height: 1.25;
+            word-wrap: break-word;
+            hyphens: auto;
+        }
+        .hfh-page-grid__excerpt {
+            font-size: 20px;
+            line-height: 1.4;
+            p:last-child {
+                margin-bottom: 0;
+            }
+        }
+        .hfh-page-grid__arrow {
+            margin-top: 20px;
+            flex: 1 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-end;
+            color: $thunderbird-red;
+        }
+        @media screen and (max-width: 740px) {
+            .hfh-page-grid__title {
+                font-size: 24px;
+                line-height: 1.3333333333;
+            }
+            .hfh-page-grid__excerpt {
+                font-size: 18px;
+                line-height: 1.4444444444;
+            }
+        }
+    }
+}

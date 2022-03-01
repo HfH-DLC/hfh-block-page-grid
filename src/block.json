@@ -1,0 +1,23 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 2,
+    "name": "hfh/page-grid",
+    "version": "0.1.0",
+    "title": "HfH Page Grid",
+    "category": "widgets",
+    "icon": "grid-view",
+    "description": "Grid of Page Teasers.",
+    "supports": {
+        "html": false,
+        "align": ["wide"]
+    },
+    "textdomain": "hfh/page-grid",
+    "editorScript": "file:./index.js",
+    "editorStyle": "file:./index.css",
+    "style": "file:./style-index.css",
+    "attributes": {
+        "pages": {
+            "type": "array"
+        }
+    }
+}
