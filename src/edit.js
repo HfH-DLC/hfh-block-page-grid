@@ -100,6 +100,7 @@ const MultiSelectSort = (props) => {
 				MultiValueLabel: SortableMultiValueLabel,
 			}}
 			closeMenuOnSelect={false}
+			className='select-input'
 		/>
 	);
 }

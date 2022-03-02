@@ -4,4 +4,11 @@
  * Replace them with your own styles or remove the file completely.
  */
 
-.wp-block-hfh-page-grid {}
+.wp-block-hfh-page-grid {
+    .select-input {
+        width: 100%;
+        input[type="text"]:focus {
+            box-shadow: none;
+        }
+    }
+}
