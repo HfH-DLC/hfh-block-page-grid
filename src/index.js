@@ -33,8 +33,12 @@ registerBlockType('hfh/page-grid', {
      */
     edit: withSelect(select => {
         const { isResolving } = select('core/data');
+        const query = {
+            status: 'any',
+            per_page: -1
+        };
         return {
-            pages: select('core').getEntityRecords('postType', 'page'),
+            pages: select('core').getEntityRecords('postType', 'page', query),
             isRequesting: isResolving('core', 'getEntityRecords', ['postType', 'page'])
         }
     })(Edit),
