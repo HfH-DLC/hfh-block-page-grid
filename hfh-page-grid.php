@@ -49,6 +49,7 @@ class Page_Grid
 	public function render_callback($block_attributes, $content)
 	{
 		$pages = $block_attributes['selectedPages'];
+		$pages = empty($pages) ? array(-1) : $pages;
 		$alignwide = $block_attributes['align'] === "wide";
 		$query = new WP_Query(array(
 			'post_type' => 'page',
